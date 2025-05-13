@@ -1,5 +1,5 @@
-import Card from "../card";
-import { Heading2 } from "../typography/heading2";
+import Card from "../../card";
+import { Heading2 } from "../../typography/heading2";
 import ElevateImage from "./elevate.png";
 import CaptureImage from "./capture.png";
 import PreserveImage from "./preserve.png";
