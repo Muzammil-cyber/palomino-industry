@@ -23,7 +23,7 @@ const FEATURES_CARDS = [{
 
 export default function FeaturesSection() {
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center gap-5 p-8">
+        <section className="min-h-screen flex flex-col items-center justify-center  gap-5 sm:gap-10 p-8">
             <Heading2 className="max-w-lg text-center">Discover the Power of Blockchain Photography</Heading2>
             <div className="flex flex-col flex-wrap sm:flex-row gap-5 justify-center items-center">
                 {FEATURES_CARDS.map((card) => (
