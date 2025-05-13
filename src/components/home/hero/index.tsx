@@ -4,9 +4,9 @@ import { Para } from "@/components/typography/para";
 import Link from "next/link";
 import AnimateCamera from "./animate-camera";
 import Image from "next/image";
-import FacebookImage from "./facebook.png";
-import InstagramImage from "./instagram.png";
-import SnapchatImage from "./snapchat.png";
+import FacebookImage from "./facebook.svg";
+import InstagramImage from "./instagram.svg";
+import SnapchatImage from "./snapchat.svg";
 
 
 const SOCIAL_LINKS = [{
@@ -43,7 +43,7 @@ export default function Hero() {
                     <div className="flex justify-start items-center gap-2.5 overflow-hidden">
                         {SOCIAL_LINKS.map((link) => (
                             <Link key={link.name} href={link.url} target="_blank" className="w-8 h-8 rounded-full bg-neutral-50/10 hover:bg-neutral-50/20 flex justify-center items-center">
-                                <Image src={link.image} width={30} height={30} alt="" className="w-4 h-4" />
+                                <Image unoptimized src={link.image} width={30} height={30} alt="" className="w-4 h-4" />
                             </Link>
                         ))}
                     </div>
