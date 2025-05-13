@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/providers/lenis-wrapper";
+import Navbar from "@/components/layout/navbar";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
       >
         <LenisProvider>
+          <Navbar />
           {children}
         </LenisProvider>
       </body>
