@@ -7,6 +7,7 @@ import FacebookImage from "@/assets/facebook.svg";
 import InstagramImage from "@/assets/instagram.svg";
 import SnapchatImage from "@/assets/snapchat.svg";
 import Image from "next/image";
+import OurValuesSection from "@/components/home/values";
 
 
 const SOCIAL_LINKS = [{
@@ -44,6 +45,7 @@ export default function Home() {
           <Heading3 className="text-center text-muted-200 max-w-5xl">Follow us and become part of the Revolution</Heading3>
         </div>
       </Strip>
+      <OurValuesSection />
       <div className="h-screen"></div>
     </main>
   );

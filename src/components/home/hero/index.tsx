@@ -25,7 +25,7 @@ const SOCIAL_LINKS = [{
 
 export default function Hero() {
     return (
-        <section className="flex flex-col sm:flex-row items-center justify-center w-full h-screen">
+        <section className="overflow-hidden flex flex-col sm:flex-row items-center justify-center w-full h-screen">
             <AnimateCamera />
 
             <div className="w-full sm:w-1/2 h-full bg-black p-6 relative  inline-flex flex-col justify-center items-start gap-9">

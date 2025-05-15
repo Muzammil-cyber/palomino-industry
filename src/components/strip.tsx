@@ -25,7 +25,7 @@ export default function Strip({ className, children }: StripProps) {
                 trigger: ref.current,
                 start: "top 50%",
                 end: "bottom 50%",
-                markers: true,
+                markers: false,
             }
         })
     }, {

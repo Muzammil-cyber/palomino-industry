@@ -2,27 +2,31 @@ import Image, { StaticImageData } from "next/image";
 import { Para } from "./typography/para";
 import { Button } from "./button";
 import { Heading3 } from "./typography/heading3";
+import { cn } from "@/libs/utils";
 
 interface CardProps {
     className?: string;
     title: string;
     description: string;
-    image: StaticImageData;
-    buttonText: string;
+    image?: StaticImageData;
+    buttonText?: string;
+    variant?: 'feature' | 'value'
 
 }
 
-export default function Card({ title, description, image, buttonText }: CardProps) {
+export default function Card({ className, title, description, image, buttonText, variant = "feature" }: CardProps) {
     return (
-        <div className="w-80 h-[500px] max-w-80 bg-neutral-50 rounded shadow-md transition-shadow hover:shadow-none inline-flex flex-col justify-start items-center overflow-hidden">
-            <Image className=" object-cover flex-1" src={image} alt={title} />
+        <div className={cn("w-80 h-[500px]  bg-neutral-50 rounded shadow-md transition-shadow hover:shadow-none inline-flex flex-col justify-start items-center overflow-hidden", variant === "value" && "h-auto w-full shadow-none", className)}>
+            {image && variant === "feature" ? <Image className=" object-cover flex-1" src={image} alt={title} /> : <div className="w-4 h-28" />}
             <div className="self-stretch px-3 py-6 flex flex-col justify-start items-start gap-3 overflow-hidden">
-                <Heading3>{title}</Heading3>
+                <Heading3 className="max-w-72">{title}</Heading3>
                 <Para className="font-medium">{description}</Para>
-                <div className="w-4 h-6" />
-                <div className="self-stretch inline-flex justify-center items-center gap-2.5 overflow-hidden">
-                    <Button>{buttonText}</Button>
-                </div>
+
+                {buttonText && <>
+                    <div className="w-4 h-6" />
+                    <div className={cn("w-full inline-flex justify-center items-center gap-2.5 overflow-hidden", variant === "value" && "items-start justify-start")}>
+                        <Button variant={variant === "feature" ? "default" : "outline"}>{buttonText}</Button>
+                    </div></>}
             </div>
         </div>
     )
