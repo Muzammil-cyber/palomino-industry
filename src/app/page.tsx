@@ -48,7 +48,6 @@ export default function Home() {
       </Strip>
       <OurValuesSection />
       <OurMissionSection />
-      <div className="h-screen"></div>
     </main>
   );
 }

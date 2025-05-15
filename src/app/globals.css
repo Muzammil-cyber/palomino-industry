@@ -17,6 +17,6 @@
 
 @layer base {
   body {
-    @apply bg-white-200 text-black;
+    @apply bg-white-200 text-black font-sans;
   }
 }
