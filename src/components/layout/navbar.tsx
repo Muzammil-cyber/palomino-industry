@@ -4,36 +4,15 @@ import Logo from "./logo.svg"
 import Link from "next/link";
 import { Button } from "../button";
 import { useLenis } from "lenis/react";
+import { NAV_LINKS } from "@/libs/constants";
 
-const NAV_LINKS = [
-    {
-        name: "Home",
-        href: "/",
-    },
-    {
-        name: "About",
-        href: "/about",
-    },
-    {
-        name: "Services",
-        href: "/services",
-    },
-    {
-        name: "Contact",
-        href: "/contact",
-    },
-];
+
 
 export default function Navbar() {
     const lenis = useLenis();
 
     const toNewsletter = () => {
-        if (window.location.pathname === "/") {
-            lenis?.scrollTo(`#newsletter`, { lerp: 0.1, duration: 3 });
-            window.history.pushState({}, "", `/#newsletter`);
-        } else {
-            window.location.href = `/#newsletter`;
-        }
+        lenis?.scrollTo(`#newsletter`, { lerp: 0.1, duration: 3 });
     }
     return (
         <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between w-full px-4 md:pr-2 py-2">

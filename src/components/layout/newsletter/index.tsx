@@ -6,7 +6,7 @@ import { Parallax } from "@/providers/parallax";
 
 export default function NewsletterSection() {
     return (
-        <div className="p-32 flex  justify-center items-center overflow-hidden">
+        <section id="newsletter" className="p-32 flex min-h-screen justify-center items-center overflow-hidden">
             <div className="w-full bg-white rounded-lg flex items-center overflow-hidden">
                 <Parallax
                     className="flex-grow h-[512px]"
@@ -22,6 +22,6 @@ export default function NewsletterSection() {
                     <Button size={'sm'}>Submit</Button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

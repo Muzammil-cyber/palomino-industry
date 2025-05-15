@@ -4,6 +4,7 @@ import "./globals.css";
 import { LenisProvider } from "@/providers/lenis-wrapper";
 import Navbar from "@/components/layout/navbar";
 import NewsletterSection from "@/components/layout/newsletter";
+import Footer from "@/components/layout/footer";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -39,7 +40,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <NewsletterSection />
-          <div className="h-screen"></div>
+          <Footer />
         </LenisProvider>
       </body>
     </html>
