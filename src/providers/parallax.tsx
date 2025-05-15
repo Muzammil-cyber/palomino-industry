@@ -84,7 +84,7 @@ export function Parallax({
                     width={width || 1920}
                     height={height || 1080}
                     style={{ objectFit }}
-                    onLoadingComplete={() => setImageLoaded(true)}
+                    onLoad={() => setImageLoaded(true)}
                     priority
                 />
             </div>
