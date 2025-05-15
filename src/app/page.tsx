@@ -8,6 +8,7 @@ import InstagramImage from "@/assets/instagram.svg";
 import SnapchatImage from "@/assets/snapchat.svg";
 import Image from "next/image";
 import OurValuesSection from "@/components/home/values";
+import OurMissionSection from "@/components/mission";
 
 
 const SOCIAL_LINKS = [{
@@ -46,6 +47,7 @@ export default function Home() {
         </div>
       </Strip>
       <OurValuesSection />
+      <OurMissionSection />
       <div className="h-screen"></div>
     </main>
   );
