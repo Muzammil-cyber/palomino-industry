@@ -23,12 +23,19 @@ const SOCIAL_LINKS = [{
     image: SnapchatImage
 }]
 
+/**
+ * Hero component
+ * This component displays the hero section of the website.
+ * It includes a heading, a paragraph, a button, and social media links.
+ * 
+ * @returns {JSX.Element} The rendered component.
+ */
+
 export default function Hero() {
     return (
-        <section className="overflow-hidden flex flex-col sm:flex-row items-center justify-center w-full h-screen">
+        <section className="overflow-hidden flex flex-col sm:flex-row items-center justify-center w-full min-h-screen sm:h-screen">
             <AnimateCamera />
-
-            <div className="w-full sm:w-1/2 h-full bg-black p-6 relative  inline-flex flex-col justify-center items-start gap-9">
+            <div className="w-full sm:w-1/2 h-full bg-black p-6 pb-12 sm:pb-0 relative  inline-flex flex-col justify-center items-start gap-4 sm:gap-9">
                 <Heading1 variant={'light'} className="max-w-xl">
                     Capture the Past Share the Future
                 </Heading1>
@@ -38,7 +45,7 @@ export default function Hero() {
                 <Link href={'#'} className={buttonVariants({ variant: "secondary" })}>
                     Explore
                 </Link>
-                <div className=" px-0.5 bottom-4 right-4 absolute inline-flex justify-start items-end gap-2.5 overflow-hidden">
+                <div className="px-0.5 bottom-4 right-4 absolute inline-flex justify-start items-end gap-2.5 overflow-hidden">
                     <div className="justify-start text-neutral-50 text-base font-medium font-['Space_Grotesk'] capitalize">Follow us on</div>
                     <div className="flex justify-start items-center gap-2.5 overflow-hidden">
                         {SOCIAL_LINKS.map((link) => (

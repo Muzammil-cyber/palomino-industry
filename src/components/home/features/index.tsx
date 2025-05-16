@@ -21,6 +21,14 @@ const FEATURES_CARDS = [{
     buttonText: "Unleash Your Creativity",
 }]
 
+/**
+ * FeaturesSection component
+ * This component displays a section with features of the product.
+ * It includes a heading and a list of feature cards.
+ * 
+ * @returns {JSX.Element} The rendered component.
+ */
+
 export default function FeaturesSection() {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center  gap-5 sm:gap-10 p-8">

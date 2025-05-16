@@ -6,8 +6,8 @@ import { Parallax } from "@/providers/parallax";
 
 export default function NewsletterSection() {
     return (
-        <section id="newsletter" className="p-32 flex min-h-screen justify-center items-center overflow-hidden">
-            <div className="w-full bg-white rounded-lg flex items-center overflow-hidden">
+        <section id="newsletter" className="sm:p-32 flex min-h-screen justify-center items-center overflow-hidden">
+            <div className="w-full bg-white rounded-lg flex flex-col sm:flex-row items-center overflow-hidden">
                 <Parallax
                     className="flex-grow h-[512px]"
                     imageClassName="object-cover"

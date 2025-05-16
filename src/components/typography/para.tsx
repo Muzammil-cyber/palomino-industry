@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import React from "react";
 import { cn } from "@/libs/utils";
 
-const paraVariants = cva('text-base font-bold font-body', {
+const paraVariants = cva('text-base font-semibold font-body', {
     variants: {
         variant: {
             dark: 'text-black',

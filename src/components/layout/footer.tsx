@@ -9,12 +9,12 @@ import { Heading4 } from "../typography/heading4"
 
 export default function Footer() {
     return (
-        <div className="group w-full h-80 p-2.5 bg-black flex gap-2.5 overflow-hidden">
-            <div className="flex-1 h-full px-4 py-6 flex flex-col justify-center items-center gap-7 overflow-hidden">
+        <div className="group w-full sm:h-80 pb-6 sm:pb-2.5 p-2.5 bg-black flex justify-center sm:justify-start flex-wrap gap-2.5 overflow-hidden">
+            <div className="max-sm:w-full sm:flex-2 h-full px-4 py-6 flex flex-col justify-center items-center gap-7 overflow-hidden">
                 <Image src={Logo} alt="" unoptimized className=" group-hover:rotate-180 transition duration-1000" />
                 <div className=" text-white text-base font-bold capitalize text-center">© 2025 Palomino, Inc.<br />All rights reserved.</div>
             </div>
-            <div className="flex-2 p-9 flex flex-col justify-center h-full gap-3 overflow-hidden">
+            <div className="flex-1 sm:flex-1 p-4 sm:p-9 flex flex-col justify-center h-full gap-3 overflow-hidden">
                 <Heading4 variant={'light'} className="mb-2">Quick Links</Heading4>
 
                 {NAV_LINKS.map((link) => (
@@ -28,7 +28,7 @@ export default function Footer() {
                 ))}
 
             </div>
-            <div className="flex-2  p-9 flex flex-col justify-center h-full gap-3 overflow-hidden">
+            <div className="flex-1 sm:flex-1 p-4   sm:p-9 flex flex-col justify-center h-full gap-3 overflow-hidden">
                 <Heading4 variant={'light'} className="mb-2">Social Links</Heading4>
                 {SOCIAL_LINKS.map((link) => (
                     <Link

@@ -39,6 +39,15 @@ interface OurMissionSectionProps {
     variant?: 'light' | 'dark'
 }
 
+
+/**
+ * OurMissionSection component
+ * This component displays the mission of the company and the team members.
+ * 
+ * @param {OurMissionSectionProps} props - The props for the OurMissionSection component.
+ * @returns {JSX.Element} The rendered component.
+ */
+
 export default function OurMissionSection({ variant = 'light' }: OurMissionSectionProps) {
 
     return (
@@ -46,8 +55,8 @@ export default function OurMissionSection({ variant = 'light' }: OurMissionSecti
             variant === 'light' ? 'bg-white' : 'bg-black',
             variant === 'light' ? 'text-black' : 'text-white',
         )}>
-            <div className="w-full h-96 max-w-[1024px] max-h-96 flex justify-start items-center gap-6 overflow-hidden">
-                <div className={cn("flex-1 self-stretch p-6 bg-black flex flex-col justify-center items-start gap-2.5 overflow-hidden", {
+            <div className="w-full sm:h-96 max-w-[1024px] sm:max-h-96 flex flex-col sm:flex-row justify-start items-center gap-4 sm:gap-6 overflow-hidden">
+                <div className={cn("px-4 sm:h-full py-3 sm:p-6 bg-black flex flex-col justify-center items-start gap-2.5 overflow-hidden", {
                     'bg-white': variant === 'dark',
                     'text-black': variant === 'dark',
                 })}>
@@ -55,7 +64,7 @@ export default function OurMissionSection({ variant = 'light' }: OurMissionSecti
                     <Heading2 variant={variant}>Embrace the Extraordinary</Heading2>
                     <Para variant={variant === 'light' ? 'muted' : 'muted-200'}>At Palomino, we believe in the power of photography to connect people and capture the beauty of the world around us. Our mission is to provide a platform that empowers individuals to share their stories, explore new perspectives</Para>
                 </div>
-                <Parallax speed={1.5} className="h-full w-96" src={SideImage} />
+                <Parallax speed={1.5} className="h-64 sm:h-full sm:w-5xl" src={SideImage} />
             </div>
             <div className="w-full px-6 flex gap-16 justify-center items-center flex-wrap content-center overflow-hidden">
                 {TEAM.map((member) => (

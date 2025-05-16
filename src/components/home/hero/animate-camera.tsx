@@ -6,6 +6,14 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
 
+/**
+ * AnimateCamera component
+ * This component displays an animated camera image that moves from the bottom to the center of the screen.
+ * It uses GSAP for animations.
+ * 
+ * @returns {JSX.Element} The rendered component.
+ */
+
 
 export default function AnimateCamera() {
 
@@ -30,7 +38,7 @@ export default function AnimateCamera() {
     })
 
     return (
-        <div ref={containerRef} className="w-full sm:w-1/2 h-full relative">
+        <div ref={containerRef} className="w-full min-h-[460px] flex-grow sm:w-1/2 h-full relative">
             <Image ref={imageRef} src={CameraImage} alt="Camera" className="absolute left-1/2 -translate-1/2 -transl -bottom-full rotate-45 " />
         </div>
     )

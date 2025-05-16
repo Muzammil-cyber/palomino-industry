@@ -14,6 +14,14 @@ interface CardProps {
 
 }
 
+/**
+ * Card component
+ * This component displays a card with an image, title, description, and an optional button.
+ * 
+ * @param {CardProps} props - The props for the Card component.
+ * @returns {JSX.Element} The rendered component.
+ */
+
 export default function Card({ className, title, description, image, buttonText, variant = "feature" }: CardProps) {
     return (
         <div className={cn("w-80 h-[500px]  bg-neutral-50 rounded shadow-md transition-shadow hover:shadow-none inline-flex flex-col justify-start items-center overflow-hidden", variant === "value" && "h-auto w-full shadow-none", className)}>
