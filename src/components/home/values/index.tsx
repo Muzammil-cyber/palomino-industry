@@ -13,6 +13,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+/**
+ * OurValuesSection component
+ * This component displays the values of the company in a visually appealing way.
+ * It uses GSAP for animations and is responsive to screen size.
+ * 
+ * @returns {JSX.Element} The rendered component.
+ */
 export default function OurValuesSection() {
 
     const { width } = useWindowSize(500);
@@ -35,25 +42,34 @@ export default function OurValuesSection() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "30% center",
-                end: "center 20%",
+                start: "30% 60%",
+                end: "40% 20%",
                 scrub: true,
-                markers: false,
             },
             defaults: {
                 ease: "sine.out",
             },
         });
-        const rowsEven = rowsRefs.filter((_, index) => index % 2 === 0);
-        const rowsOdd = rowsRefs.filter((_, index) => index % 2 !== 0);
 
-        rowsEven.forEach((row, index) => {
-            tl.fromTo(row.current, { y: 500, }, { y: 0 }, index * 0.2);
+        // Even rows come in from the bottom together
+        // Odd rows come in from the top together
+        rowsRefs.forEach((row, index) => {
+            const y = index % 2 === 0 ? 500 : -500;
+            tl.from(row.current, {
+                y: y,
+                duration: 1,
+                stagger: {
+                    amount: 0.5,
+                    from: "start",
+                },
+            }, "<");
         });
-        rowsOdd.forEach((row, index) => {
-            tl.fromTo(row.current, { y: -500, }, { y: 0 }, index * 0.2);
-        }
-        );
+
+
+
+
+
+
 
     }, {
         scope: containerRef,

@@ -57,7 +57,7 @@ export default function OurMissionSection({ variant = 'light' }: OurMissionSecti
                 </div>
                 <Parallax speed={1.5} className="h-full w-96" src={SideImage} />
             </div>
-            <div className="w-full px-6 flex justify-between items-center flex-wrap content-center overflow-hidden">
+            <div className="w-full px-6 flex gap-16 justify-center items-center flex-wrap content-center overflow-hidden">
                 {TEAM.map((member) => (
                     <TeamMember key={member.name} name={member.name} role={member.role} description={member.description} image={member.image} variant={variant} />
                 ))}
@@ -69,7 +69,7 @@ export default function OurMissionSection({ variant = 'light' }: OurMissionSecti
 
 export function TeamMember({ name, role, description, image, variant }: { name: string, role: string, description: string, image: string, variant: 'light' | 'dark' }) {
     return (
-        <div className="flex flex-col justify-start items-center gap-1.5 w-1/4 max-w-[300px]">
+        <div className="flex flex-col justify-start items-center gap-1.5 w-fit max-w-[300px] text-center">
             <Image src={`/${image}`} alt={name} width={100} height={100} className="w-44 h-44 rounded-full" />
             <Heading3 variant={variant === "light" ? "dark" : 'light'}>{name}</Heading3>
             <Heading4 className={cn("text-muted-200", {
